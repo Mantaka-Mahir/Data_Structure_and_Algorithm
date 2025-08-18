@@ -7,10 +7,10 @@ using namespace std;
     ios::sync_with_stdio(false); \
     cin.tie(0);                  \
     cout.tie(0);
+// problem link: https://www.geeksforgeeks.org/problems/implementing-ceil-in-bst/1
+// time complexity: O(h) → h is the height of the BST (O(log n) for balanced, O(n) for skewed tree)
+// space complexity: O(1) → uses only a few variables, no recursion or extra data structures
 
-// problem link:https://www.geeksforgeeks.org/problems/implementing-ceil-in-bst/1
-// time complexity:
-// space complexity:
 struct Node
 {
     int data;

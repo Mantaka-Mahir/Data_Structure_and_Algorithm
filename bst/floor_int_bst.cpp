@@ -8,10 +8,10 @@ using namespace std;
     cin.tie(0);                  \
     cout.tie(0);
 
-// problem link:https://www.geeksforgeeks.org/problems/floor-in-bst/1
-// time complexity:
-// space complexity:
-// Function to search a node in BST.
+// problem link: https://www.geeksforgeeks.org/problems/floor-in-bst/1
+// time complexity: O(h) → h is height of the BST (O(log n) for balanced, O(n) for skewed tree) 
+// space complexity: O(1) → only uses a few variables, no extra recursion or data structures
+
 class Node
 {
 public:

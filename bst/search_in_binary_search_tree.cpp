@@ -8,7 +8,10 @@ using namespace std;
     cin.tie(0);                  \
     cout.tie(0);
 
-// problem link :https://leetcode.com/problems/search-in-a-binary-search-tree/
+// problem link : https://leetcode.com/problems/search-in-a-binary-search-tree/
+// time complexity: O(h) → h is the height of the BST (O(log n) if balanced, O(n) if skewed)
+// space complexity: O(1) → uses only a constant number of variables, no recursion or extra data structures
+
 
 struct TreeNode
 {
