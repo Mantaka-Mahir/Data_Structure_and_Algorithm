@@ -101,6 +101,49 @@ public:
         return false;
     }
 };
+class Solution
+{
+public:
+    bool isCycle(int V, vector<vector<int>> &edges)
+    {
+        // Code here
+        vector<int> visited(V, 0);
+        queue<pair<int, int>> q;
+        vector<vector<int>> adj(V);
+        for (auto edge : edges)
+        {
+            adj[edge[0]].push_back(edge[1]);
+            adj[edge[1]].push_back(edge[0]);
+        }
+        for (int i = 0; i < V; i++)
+        {
+            if (!visited[i])
+            {
+                q.push({i, -1});
+                visited[i] = 1;
+                while (!q.empty())
+                {
+                    int node = q.front().first;
+                    int parent = q.front().second;
+                    q.pop();
+                    for (auto itr : adj[node])
+                    {
+                        if (!visited[itr])
+                        {
+                            visited[itr] = 1;
+                            q.push({itr, node});
+                        }
+                        else if (parent != itr)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+};
 int32_t main()
 {
     fast;
